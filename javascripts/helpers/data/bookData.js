@@ -42,23 +42,24 @@ const featured = bookInfo.filter((book) => {
 });
 
 const titles = bookInfo.map((book) => {
-  return { title: book.title, price: book.price };
+  return { title: book.title, price: book.price};
 });
 
-const getBooks = (type) => {
-    switch(type) {
-        case 'all':
-            return bookInfo;
-            break;
-        case 'featured':
-            return featured;
-            break;
-        case 'titles':
-            return titles;
-            break;
-        default:
-            return;
-    }
+const getBooks = (type)=>{
+  switch(type) {
+      case 'all':
+          return bookInfo
+          break;
+
+      case 'featured':
+          return featured;
+          break;
+      case 'titles':
+          return titles;
+          break;
+      default:
+          return;
+  }
 }
 
-export { getBooks }
+export{ getBooks }
